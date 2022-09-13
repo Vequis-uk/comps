@@ -1,0 +1,17 @@
+<h1>Component Demonstration</h1>
+<p>This app will show how to use multiple components and set up routing.</p>
+<p>The order of routers set up in the app.module.ts matters, for exmaple</p>
+<p>Setting up a ** rule like below:</p>
+<img src="../../assets/router-example.png" alt="" />
+<p>This will redirect the URL if it is anything other than the list below:</p>
+<img src="../../assets/router-example2.png" alt="" />
+<p>
+  The issue with this is the AppRoutingModule will overwrite all of the below
+  Modules, thus the Routers that have been set up.
+</p>
+<p>
+  In order to resolve this, the AppRoutingModule with the '**' rule needs to be
+  moved to the bottom of the list, it will then be parsed last allowing the other
+  Routers to work as intended, then checking to see if the URL is anything other
+  than the above Routers.
+</p>

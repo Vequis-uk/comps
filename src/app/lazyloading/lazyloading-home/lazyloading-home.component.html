@@ -1,0 +1,39 @@
+<h1>LazyLoading</h1>
+<p>
+  Usually you would have a module and a routing module for each component or set
+  of components, for example:
+</p>
+<img src="../../../assets/routing-layout-example.png" alt="" />
+<p>This would then contain the routing rules as below:</p>
+<img src="../../../assets/normal-routing-example.png" alt="" />
+<p>
+  In order to set up lazy loading you would have to remove any import statements
+  for the modules from anywhere else in the project
+</p>
+<p>For example the below would need to be removed</p>
+<img src="../../../assets/remove-app.module-reference.png" alt="" />
+<p>
+  You would then need to add the 'lazyloading' Route into the main
+  AppRoutingModule instead of its own lazyloading-routing.module.ts as below:
+</p>
+<img src="../../../assets/add-lazyloading-to-app-routing.module.png" alt="" />
+<p>This then renders the lazyloading-routing.module.ts redundant.</p>
+<p>
+  I think this is a good solution because it keeps all of the routing in one
+  place thus making it easier to manage.
+</p>
+<h1>Bad Solution</h1>
+<p>
+  The above is a bad solution as it would make it harder to expand on in the
+  future and is essentially making the project non-modular
+</p>
+<p>
+  The correct implementation would be to remove the path from the router
+  component as below:
+</p>
+<img src="../../../assets/lazyload-remove-path.png" alt="" />
+<p>
+  And then setting up the actual lazy-loading within the app-routing.module.js
+  as below:
+</p>
+<img src="../../../assets/" alt="">

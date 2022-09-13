@@ -1,0 +1,11 @@
+.small-line {
+    height: 3px;
+    background-color: black;
+    width: 300px;
+    margin: auto;
+    float: left;
+}
+.box{
+    margin-top: 10px;
+    border: 2px;
+}
