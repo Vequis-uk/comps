@@ -25,7 +25,8 @@
 <h1>Bad Solution</h1>
 <p>
   The above is a bad solution as it would make it harder to expand on in the
-  future and is essentially making the project non-modular
+  future and is essentially making the project non-modular, which is what
+  Angular is designed to achieve
 </p>
 <p>
   The correct implementation would be to remove the path from the router
@@ -36,4 +37,24 @@
   And then setting up the actual lazy-loading within the app-routing.module.js
   as below:
 </p>
-<img src="../../../assets/" alt="">
+<img src="../../../assets/lazyloading-example.png" alt="" />
+<p>
+  This is giving it a path to look for 'lazyloading' and then binding it to the
+  loadChildren function, which is then importing the file dynamically it will
+  '.then' return the LazyloadingModule as above.
+</p>
+<p>
+  You have to remove the path from the individual routing modules as this is
+  essentiually asking it to load the path twice, which would look like:
+  <b>localhost:4200/lazyloading/lazyloading</b>
+</p>
+<p>
+  This will cause it to just load the current component when rendering and then
+  just add each component on as they are navigated to (compiled as javascript)
+  as seen below:
+</p>
+<img src="../../../assets/networking-example.png" alt="" />
+<p>
+  The image on the right is loading the home page, then the second image is
+  navigating to the elements
+</p>

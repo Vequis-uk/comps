@@ -19,6 +19,20 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'views',
+    loadChildren: () =>
+      import('./views/views.module').then(
+        (m) => m.ViewsModule
+      ),
+  },
+  {
+    path: 'modules',
+    loadChildren: () =>
+      import('./mods/mods.module').then(
+        (m) => m.ModsModule
+      ),
+  },
+  {
     path: 'lazyloading',
     loadChildren: () =>
       import('./lazyloading/lazyloading.module').then(
