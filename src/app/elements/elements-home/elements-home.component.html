@@ -1,7 +1,16 @@
-<h1>Segment</h1>
-<hr class="small-line" />
-<br />
-<div class="box">
-  <p>This is an example of a segment component</p>
-</div>
-<app-placeholder [header]="true" [lines]="20"></app-placeholder>
+<app-divider> Placeholder Component </app-divider>
+<app-placeholder [header]="true" [lines]="5"></app-placeholder>
+
+<app-divider>
+  Segment Component
+</app-divider>
+<app-segment>
+  <header>
+    <i class="pdf file outline icon"></i>
+    No documents are listed for this customer.
+  </header>
+
+  <div class="ui primary button">
+    Add Document
+  </div>
+</app-segment>

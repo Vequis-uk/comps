@@ -1,0 +1,40 @@
+<table class="ui table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header.label }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let record of data">
+      {{
+        record | json
+      }}
+      <td *ngFor="let header of headers">
+        {{ header }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="ui table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">
+        {{ header.label }}
+      </th>
+    </tr>
+    <tr *ngFor="let data of data">
+      <td>
+        {{ data.name }}
+      </td>
+      <td>
+        {{ data.age }}
+      </td>
+      <td>
+        {{ data.job }}
+      </td>
+    </tr>
+  </thead>
+</table>
